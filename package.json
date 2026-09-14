@@ -1,0 +1,46 @@
+{
+  "name": "hive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HIVE — unified personal intelligence layer: tasks, knowledge, patterns, observations. Obsidian second brain.",
+  "main": "src/index.js",
+  "bin": {
+    "hive": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "once": "node src/index.js --once",
+    "web": "node src/web/publisher.js",
+    "say": "node src/index.js say",
+    "ask": "node src/index.js ask",
+    "agents": "node src/index.js agents",
+    "status": "node src/index.js status",
+    "approve": "node src/index.js approve",
+    "check": "node src/index.js check",
+    "seed-demo": "node scripts/seed-demo.js",
+    "google-auth": "node scripts/google-auth.js",
+    "test": "node --test test/",
+    "search": "node src/index.js search",
+    "observe": "node src/index.js observe",
+    "verify": "node scripts/verify.js",
+    "doctor": "node src/index.js doctor",
+    "telegram-setup": "node scripts/telegram-setup.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-agent",
+    "obsidian",
+    "personal-assistant",
+    "claude",
+    "automation"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "googleapis": "^140.0.0",
+    "node-notifier": "^10.0.1",
+    "pdfjs-dist": "4.8.69"
+  }
+}

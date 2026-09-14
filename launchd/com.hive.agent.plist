@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template — install with scripts/install-macos.sh (it substitutes paths). -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.hive.agent</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__NODE__</string>
+    <string>__HIVE_DIR__/src/index.js</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>__HIVE_DIR__</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>StandardOutPath</key>
+  <string>__HIVE_DIR__/data/hive.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HIVE_DIR__/data/hive.err.log</string>
+</dict>
+</plist>

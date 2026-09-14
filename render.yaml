@@ -1,0 +1,19 @@
+# Render blueprint for the Hive cloud engine.
+# The manual walkthrough (recommended the first time): docs/RENDER_DEPLOY.md
+services:
+  - type: web
+    name: hive
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: WEB_AUTH_KEY          # REQUIRED — dashboard login key (openssl rand -hex 16)
+        sync: false
+      - key: GROQ_API_KEY          # paste when ready; without it Hive runs mock brains
+        sync: false
+      - key: ANTHROPIC_API_KEY     # optional second brain
+        sync: false
